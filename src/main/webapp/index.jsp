@@ -1,84 +1,68 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Welcome Hari</title>
+  <meta charset="UTF-8">
+  <title>Welcome Hari</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #1d2671, #c33764);
-            font-family: "Segoe UI", Tahoma, sans-serif;
-        }
+    .card {
+      background: #ffffff;
+      padding: 45px 70px;
+      border-radius: 14px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: slideUp 1s ease-in-out;
+    }
 
-        .card {
-            background: #ffffff;
-            padding: 40px 60px;
-            border-radius: 12px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-            text-align: center;
-            animation: fadeIn 1.2s ease-in-out;
-        }
+    h2 {
+      color: #1f2933;
+      font-size: 30px;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
 
-        h2 {
-            color: #333;
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
+    p {
+      color: #4b5563;
+      font-size: 17px;
+      margin: 0;
+    }
 
-        p {
-            color: #666;
-            font-size: 16px;
-            margin-top: 0;
-        }
+    .line {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(to right, #2563eb, #16a34a);
+      margin: 18px auto;
+      border-radius: 10px;
+    }
 
-        .badge {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 8px 16px;
-            background: #1d2671;
-            color: #fff;
-            border-radius: 20px;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="card">
-        <h2>Hi Hari 👋</h2>
-        <p>
-            Hope you're enjoying the build &amp; deployment journey.<br/>
-            <strong>Deployed successfully using Jenkins &amp; Tomcat!</strong>
-        </p>
-
-        <div class="badge">
-            CI/CD in Action 🚀
-        </div>
-
-        <p style="margin-top:15px;font-size:14px;color:#888;">
-            Server Time:
-            <strong><%= new java.util.Date() %></strong>
-        </p>
-    </div>
+  <div class="card">
+    <h2>Hello Hari</h2>
+    <div class="line"></div>
+    <p>Hope you are enjoying the automation concepts.</p>
+  </div>
 </body>
 </html>
+
