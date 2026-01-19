@@ -17,7 +17,7 @@ pipeline {
 
         stage('Code Review') {
             steps {
-                withSonarEnvironment('sonar') {
+                withSonarEnvironment('sonar-server') {
                     sh 'mvn sonar:sonar'
                 }
             }
