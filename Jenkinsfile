@@ -17,7 +17,7 @@ pipeline {
 
         stage('Code Review') {
             steps {
-                withSonarQubeEnv('sonar-server') {
+                withSonarQubeEnv('SonarQube-Server') {
                     sh 'mvn sonar:sonar'
                 }
             }
@@ -26,7 +26,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sshagent(['Tomcat-server']) {
-                    sh 'scp -o StrictHostKeyChecking=no target/01-maven-web-app.war ec2-user@43.204.97.178:/home/ec2-user/apache-tomcat-11.0.15/webapps'
+                    sh 'scp -o StrictHostKeyChecking=no target/01-maven-web-app.war ec2-user@:/home/ec2-user/apache-tomcat-11.0.15/webapps'
                 }
             }
         }
