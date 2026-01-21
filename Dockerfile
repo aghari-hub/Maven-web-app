@@ -1,4 +1,5 @@
 FROM tomcat:latest
 MAINTAINER  Hari <aghari128@gmail.com"
 EXPOSE 8080
-COPY target/maven-web-app.war /usr/local/tomcat/webapps/maven-web-app.war
+COPY target/01-maven-web-app.war  /usr/local/tomcat/webapps/01-maven-web-app.war
+
