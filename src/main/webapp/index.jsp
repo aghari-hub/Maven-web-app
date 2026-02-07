@@ -35,9 +35,7 @@
     Spotify (Login)
   </button>
 
-  <button onclick="openApp('https://www.netflix.com/login')">
-    Netflix (Login)
-  </button>
+  
 </div>
 
 <script src="app.js"></script>
